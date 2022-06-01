@@ -34,7 +34,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <%- if @enhanced_cart %>
+      <%- if !enhanced_cart.empty? %>
         <%= form_tag orders_path do %>
           <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
