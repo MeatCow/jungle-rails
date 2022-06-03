@@ -1,10 +1,12 @@
-<section>
+<section class="admin-products-dashboard">
 
   <header class="page-header">
     <h1>Admin &raquo; All Products</h1>
   </header>
 
-  <%= link_to 'Current Products', admin_products_url, class: 'btn btn-info mb-3' %>
+  <div class="card card-body bg-light">
+    <%= link_to 'Current Products', admin_products_url, class: 'btn btn-info' %>
+  </div>
 
   <div class="panel panel-default items">
     <table class="table table-bordered">
