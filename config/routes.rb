@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#show'
 
+  # These routes are used for signing up.
+  get '/signup', to: 'users#new'
+  get '/users', to: 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
