@@ -7,4 +7,14 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
   validates :password_digest, presence: true
+  validates_length_of :password, minimum: 8
+  validates :password_confirmation, presence: true
+  validates_uniqueness_of :email, case_sensitive: false
+
+  def self.authenticate_with_credentials(email, password)
+    user = User.find_by('email ILIKE ?', email)&.authenticate(password)
+    return user if user
+
+    nil
+  end
 end
