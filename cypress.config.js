@@ -6,6 +6,7 @@ module.exports = defineConfig({
   trashAssetsBeforeRuns: false,
 
   e2e: {
+    specPattern: "cypress/integration/**/*.cy.{js,jsx,ts,tsx}",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
