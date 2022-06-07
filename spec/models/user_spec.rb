@@ -104,5 +104,10 @@ describe User, type: :model do
       user = User.authenticate_with_credentials('MATTHIEU.pauze@gmail.com', 'hello world!')
       expect(user).to be_a User
     end
+
+    it 'should authenticate a user even if the email contains leading/trailing whitespace' do
+      user = User.authenticate_with_credentials('     matthieu.pauze@gmail.com    ', 'hello world!')
+      expect(user).to be_a User
+    end
   end
 end

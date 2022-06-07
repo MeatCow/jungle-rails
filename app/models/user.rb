@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :email, case_sensitive: false
 
   def self.authenticate_with_credentials(email, password)
-    user = User.find_by('email ILIKE ?', email)&.authenticate(password)
+    user = User.find_by('email ILIKE ?', email.strip)&.authenticate(password)
     return user if user
 
     nil
