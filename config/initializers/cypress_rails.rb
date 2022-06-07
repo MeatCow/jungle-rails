@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 return unless Rails.env.test?
 
 CypressRails.hooks.before_server_start do
