@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('Homepage spec', () => {
   it('passes', () => {
     cy.visit('http://127.0.0.1:45678')
   })
